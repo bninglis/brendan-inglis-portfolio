@@ -2,7 +2,7 @@ import { useState } from "react";
 import MenuBody from "./MenuBody/MenuBody";
 import Tabs from "./Tabs/Tabs";
 
-export default function Menu({ phase, handleSetPhase }) {
+export default function Menu({ phase, handleSetPhase, handleSetWork }) {
     return (
         <>
             <Tabs phase={phase} handleSetPhase={handleSetPhase} />
@@ -26,7 +26,11 @@ export default function Menu({ phase, handleSetPhase }) {
                     </div>
                 </button>
                 <div className="menu__body">
-                    <MenuBody phase={phase} handleSetPhase={handleSetPhase} />
+                    <MenuBody
+                        phase={phase}
+                        handleSetPhase={handleSetPhase}
+                        handleSetWork={handleSetWork}
+                    />
                 </div>
             </div>
         </>

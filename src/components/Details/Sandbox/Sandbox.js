@@ -1,10 +1,12 @@
 import "./Sandbox.scss";
 import Flags from "../Flags/Flags";
+import TechStack from "../TechStack/TechStack";
 import hackathonWinner from "../../../assets/images/hackathon-winner-image.jpg";
 import sandboxOne from "../../../assets/images/sandbox-1.png";
 import sandboxTwo from "../../../assets/images/sandbox-2.png";
 
 export default function Sandbox() {
+    const sandboxStack = ["html", "css", "sass", "javascript", "react", "nodejs"];
     return (
         <>
             <div className="details">
@@ -49,6 +51,12 @@ export default function Sandbox() {
                         social media app that would be used to promote meeting people with shared
                         interests within the company and help to form inter-departmental bonds.
                     </p>
+                </div>
+                <div className="tech">
+                    <h3 className="tech__title">Technologies Used:</h3>
+                    <div className="tech__container">
+                        <TechStack work={"sandbox"} stack={sandboxStack} />
+                    </div>
                 </div>
             </div>
             <Flags

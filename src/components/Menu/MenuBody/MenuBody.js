@@ -1,4 +1,4 @@
-export default function MenuBody({ phase, handleSetPhase }) {
+export default function MenuBody({ phase, handleSetPhase, handleSetWork }) {
     if (phase === "intro") {
         return (
             <div className="intro">
@@ -39,17 +39,32 @@ export default function MenuBody({ phase, handleSetPhase }) {
     } else if (phase === "work") {
         return (
             <div className="work-menu">
-                <button className="work-menu__button work-menu__button--nerf">
+                <button
+                    className="work-menu__button work-menu__button--nerf"
+                    onClick={() => {
+                        handleSetWork("nerf");
+                    }}
+                >
                     <div className="work-menu__ribbon work-menu__ribbon--nerf">
                         <h3 className="work-menu__label work-menu__label--nerf">Nerf Herder</h3>
                     </div>
                 </button>
-                <button className="work-menu__button work-menu__button--sandbox">
+                <button
+                    className="work-menu__button work-menu__button--sandbox"
+                    onClick={() => {
+                        handleSetWork("sandbox");
+                    }}
+                >
                     <div className="work-menu__ribbon work-menu__ribbon--sandbox">
                         <h3 className="work-menu__label work-menu__label--sandbox">Sandbox</h3>
                     </div>
                 </button>
-                <button className="work-menu__button work-menu__button--brainflix">
+                <button
+                    className="work-menu__button work-menu__button--brainflix"
+                    onClick={() => {
+                        handleSetWork("brainflix");
+                    }}
+                >
                     <div className="work-menu__ribbon work-menu__ribbon--brainflix">
                         <h3 className="work-menu__label work-menu__label--brainflix">BrainFlix</h3>
                     </div>
@@ -59,7 +74,7 @@ export default function MenuBody({ phase, handleSetPhase }) {
     } else {
         return (
             <div className="contact">
-                <button className="contact__button contact__button--linkedin">
+                <a href="blank" className="contact__button contact__button--linkedin">
                     <div className="contact__ribbon contact__ribbon--linkedin">
                         <svg className="contact__icon contact__icon--linkedin">
                             <symbol viewBox="0 0 24 24">
@@ -68,8 +83,8 @@ export default function MenuBody({ phase, handleSetPhase }) {
                         </svg>
                         <h2 className="contact__text contact__text--linkedin">LinkedIn</h2>
                     </div>
-                </button>
-                <button className="contact__button contact__button--github">
+                </a>
+                <a href="blank" className="contact__button contact__button--github">
                     <div className="contact__ribbon contact__ribbon--github">
                         <svg className="contact__icon contact__icon--github">
                             <symbol viewBox="0 0 24 24">
@@ -78,8 +93,8 @@ export default function MenuBody({ phase, handleSetPhase }) {
                         </svg>
                         <h2 className="contact__text contact__text--github">GitHub</h2>
                     </div>
-                </button>
-                <button className="contact__button contact__button--email">
+                </a>
+                <a href="blank" className="contact__button contact__button--email">
                     <div className="contact__ribbon contact__ribbon--email">
                         <svg className="contact__icon contact__icon--email">
                             <symbol viewBox="0 0 24 24">
@@ -88,7 +103,7 @@ export default function MenuBody({ phase, handleSetPhase }) {
                         </svg>
                         <h2 className="contact__text contact__text--email">Email</h2>
                     </div>
-                </button>
+                </a>
             </div>
         );
     }
