@@ -19,5 +19,97 @@
         clip-path: polygon(100% 0, calc(100% - 4rem) 50%, 100% 100%, 0 100%, 0 0);
         min-width: 48rem;
         width: 100%;
+        transform: translateX(0rem);
+        transition: 2s;
+
+        // &--roll {
+        //     clip-path: polygon(0 0, 0 50%, 0 100%, 0 100%, 0 0);
+        // }
+    }
+
+    &__window {
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        clip-path: polygon(calc(100% - 4rem) 0, 100% 0, 100% 100%, calc(100% - 4rem) 100%);
+        transform: translateX(0rem);
+        transition: 1s;
+        animation: window-unroll 1s;
+
+        &--roll {
+            transform: translateX(-100%);
+            transition: 1s;
+        }
+    }
+
+    &__roll {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        outline: dashed 0.2rem $PORTBLUE;
+        outline-offset: -1.5rem;
+        background-color: $PORTEGG;
+        clip-path: polygon(100% 0, calc(100% - 4rem) 50%, 100% 100%, 0 100%, 0 0);
+        transform-origin: 100% 50%;
+        transform: scaleX(-100%) translateX(0);
+        transition: 1s;
+        z-index: -100;
+        animation: roll-unroll 1s;
+
+        &--roll {
+            transform: scaleX(-100%) translateX(100%);
+            transition: 1s;
+        }
+    }
+
+    &__remove {
+        width: 100%;
+        height: 8rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        transition: 1s;
+        animation: remove-unroll 1s;
+
+        &--roll {
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transition: 1s;
+        }
+    }
+}
+
+@keyframes window-unroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes roll-unroll {
+    0% {
+        transform: scaleX(-100%) translateX(100%);
+    }
+    100% {
+        transform: scaleX(-100%) translateX(0);
+    }
+}
+
+@keyframes remove-unroll {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
