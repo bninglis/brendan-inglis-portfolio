@@ -2,6 +2,7 @@ import "./Subtitle.scss";
 import { useState } from "react";
 
 export default function Subtitle({ handleSetPhase }) {
+    // eslint-disable-next-line
     const [isRolled, setIsRolled] = useState(false);
     return (
         <div className="subtitle">

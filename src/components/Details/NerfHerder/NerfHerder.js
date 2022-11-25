@@ -86,9 +86,12 @@ export default function NerfHerder({ isDrawerOpen, setIsDrawerOpen }) {
             <Flags
                 workLinks={{
                     data: [
-                        { type: "GitHub", href: "blank" },
-                        { type: "Slide Deck", href: "blank" },
-                        { type: "Prototype", href: "blank" },
+                        { type: "GitHub", href: "https://github.com/bninglis/nerf-herder" },
+                        {
+                            type: "Slide Deck",
+                            href: "https://docs.google.com/presentation/d/1dxUTGAohUz8FJW992S2frTRgcgXStIekVFMHLldmo7E/edit?usp=sharing",
+                        },
+                        { type: "Prototype", href: "https://nerf-herder.netlify.app/" },
                     ],
                     work: "nerf",
                 }}

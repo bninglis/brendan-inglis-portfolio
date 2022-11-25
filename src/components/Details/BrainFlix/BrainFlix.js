@@ -52,7 +52,7 @@ export default function BrainFlix({ isDrawerOpen, setIsDrawerOpen }) {
                             alt="brainflix screenshot"
                         />
                     </div>
-                    <p  className="details__summary details__summary--nerf">
+                    <p className="details__summary details__summary--nerf">
                         BrainFlix is a proof-of-concept prototype for a Youtube-style video site. It
                         has dynamic recommendations for alternate videos; functional liking,
                         commenting, uploading, and deleting; and a custom video player user
@@ -71,8 +71,11 @@ export default function BrainFlix({ isDrawerOpen, setIsDrawerOpen }) {
             <Flags
                 workLinks={{
                     data: [
-                        { type: "GitHub", href: "blank" },
-                        { type: "Prototype", href: "blank" },
+                        {
+                            type: "GitHub",
+                            href: "https://github.com/bninglis/brendan-inglis-brainflix",
+                        },
+                        { type: "Prototype (coming soon)", href: "blank" },
                     ],
                     work: "nerf",
                 }}

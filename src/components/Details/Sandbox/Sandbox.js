@@ -105,9 +105,12 @@ export default function Sandbox({ isDrawerOpen, setIsDrawerOpen }) {
             <Flags
                 workLinks={{
                     data: [
-                        { type: "GitHub", href: "blank" },
-                        { type: "Slide Deck", href: "blank" },
-                        { type: "Prototype", href: "blank" },
+                        { type: "GitHub", href: "https://github.com/bninglis/sandbox-client" },
+                        {
+                            type: "Slide Deck",
+                            href: "https://docs.google.com/presentation/d/1QT-zuRWmUTzqSu7fuEc2Tme8xMBs6H7_dZrItPk7Afo/edit?usp=sharing",
+                        },
+                        { type: "Prototype (coming soon)", href: "blank" },
                     ],
                     work: "sandbox",
                 }}
