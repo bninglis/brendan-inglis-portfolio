@@ -1,0 +1,135 @@
+@use "../../../styles/styles" as *;
+
+.intro {
+    &__text {
+        font-size: 2.4rem;
+        color: $PORTBLUE;
+    }
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__shadow {
+        @include pathshadow;
+    }
+
+    &__ribbon {
+        display: flex;
+        justify-content: center;
+        width: 20rem;
+        height: 12rem;
+        background-color: $PORTRED;
+        clip-path: polygon(100% 100%, 50% calc(100% - 6rem), 0 100%, 0 0, 100% 0);
+    }
+}
+
+.contact {
+    background-color: $PORTEGG;
+    margin: 4rem;
+    @include boxshadow;
+    height: 40rem;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &__ribbon {
+        background-color: $PORTRED;
+        display: flex;
+        align-items: center;
+        padding-left: 6rem;
+        padding-right: 4rem;
+        margin-left: -2rem;
+        max-width: 36rem;
+        height: 8rem;
+        clip-path: polygon(100% 0, calc(100% - 4rem) 50%, 100% 100%, 0 100%, 0 0);
+
+        &--linkedin {
+            background-color: $PORTRED;
+        }
+
+        &--github {
+            background-color: $PORTBLUE;
+        }
+
+        &--email {
+            background-color: $PORTYELL;
+        }
+    }
+
+    &__icon {
+        height: 6rem;
+
+        &--linkedin {
+            fill: $PORTYELL;
+        }
+
+        &--github {
+            fill: $PORTEGG;
+        }
+
+        &--linkedin {
+            fill: $PORTBLUE;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        @include pathshadow;
+    }
+
+    &__text {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__shadow {
+        @include pathshadow;
+    }
+}
+
+.work-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 2rem;
+
+    &__button {
+        width: calc(100% + 4rem);
+        margin-right: -4rem;
+        @include pathshadow;
+        margin-top: 0;
+        margin-bottom: 8rem;
+    }
+
+    &__label {
+        width: 17rem;
+        color: $PORTEGG;
+
+        &--selected {
+            color: $PORTRED;
+        }
+    }
+
+    &__description {
+        width: 100%;
+        color: $PORTBLUE;
+    }
+
+    &__ribbon {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 4rem 50%);
+        background-color: $PORTYELL;
+        height: 8rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding-left: 8rem;
+
+        &--selected {
+            background-color: $PORTEGG;
+        }
+    }
+}

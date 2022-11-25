@@ -1,0 +1,32 @@
+@use "../../../styles/styles" as *;
+
+.flags {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+    z-index: -1;
+
+    &__flag {
+        background-color: $PORTRED;
+        width: 12rem;
+        height: 8rem;
+        clip-path: polygon(100% 100%, 50% calc(100% - 4rem), 0 100%, 0 0, 100% 0);
+    }
+
+    &__container {
+        @include pathshadow;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__title {
+        margin: 0;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

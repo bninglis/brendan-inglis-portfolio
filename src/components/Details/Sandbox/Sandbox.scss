@@ -1,3 +1,5 @@
+@use "../../../styles/styles" as *;
+
 .cls-1 {
     fill: #00a4ef;
 }
@@ -9,3 +11,38 @@
 .cls-3 {
     fill: #ffb900;
 }
+
+.sandbox.brainstation-frame {
+    &--hackathon {
+        margin-top: -3rem;
+        padding: 0;
+    }
+
+    &__image {
+        &--hackathon {
+            width: 22rem;
+        }
+    }
+}
+
+.sandbox.details {
+    &__summary {
+        &--sandbox {
+            font-size: 1.8rem;
+        }
+    }
+    &__alignment {
+        shape-outside: polygon(
+            100% 25%,
+            calc(100% - 31rem) 25%,
+            calc(100% - 31rem) 100%,
+            100% 100%,
+            100% 0%
+        );
+    }}
+
+.sandbox.details__screenshot--use{
+            margin-top: 6rem;
+        }
+
+

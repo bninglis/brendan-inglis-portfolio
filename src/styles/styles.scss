@@ -1,0 +1,7 @@
+@forward "./partials/variables";
+@forward "./partials/mixins";
+
+@use "./partials/resets";
+@use "./partials/defaults";
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;

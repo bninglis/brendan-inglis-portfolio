@@ -1,0 +1,48 @@
+@use "./typography" as *;
+@use "./variables";
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Sans";
+    color: variables.$PORTEGG;
+}
+
+p {
+    font-family: "Slab SemiBold";
+    color: variables.$PORTEGG;
+}
+
+h1 {
+    font-size: 6.4rem;
+    color: variables.$PORTBLUE;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1.4rem;
+}

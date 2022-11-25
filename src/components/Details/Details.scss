@@ -1,0 +1,35 @@
+@use "../../styles/styles" as *;
+
+.headshot {
+    width: 100%;
+    border: $PORTTAN 1rem solid;
+    border-radius: 4rem;
+    background-color: $PORTBLUE;
+    box-shadow: inset 0px 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.headshot {
+    width: 100%;
+    border: $PORTTAN 1rem solid;
+    border-radius: 50%;
+    background-color: $PORTBLUE;
+    box-shadow: inset 0px 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,31 +1,29 @@
+import "./Details.scss";
+import headshot from "../../assets/images/headshot-transp.png";
+import { useState } from "react";
 import Sandbox from "./Sandbox/Sandbox";
 import NerfHerder from "./NerfHerder/NerfHerder";
 import BrainFlix from "./BrainFlix/BrainFlix";
 
 export default function Details({ phase, selectedWork }) {
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     if (phase !== "work") {
         return (
             <div className="details">
-                <h2>This is my headshot</h2>
+                <div  className="headshot__container">
+                    <img className="headshot" src={headshot} alt="brendan inglis's headshot" />
+                </div>
             </div>
         );
     } else if (selectedWork === "sandbox") {
         return (
-            <div className="details">
-                <Sandbox />
+            <div className="details__frame">
+                <Sandbox isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
             </div>
         );
     } else if (selectedWork === "nerf") {
-        return (
-            <div className="details">
-                <NerfHerder />
-            </div>
-        );
+        return <NerfHerder isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />;
     } else if (selectedWork === "brainflix") {
-        return (
-            <div className="details">
-                <BrainFlix />
-            </div>
-        );
+        return <BrainFlix isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />;
     }
 }

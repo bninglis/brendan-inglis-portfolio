@@ -1,0 +1,23 @@
+@use "../../../styles/styles" as *;
+
+.subtitle {
+    position: absolute;
+    @include pathshadow;
+    right: calc(50% + 16rem);
+    top: 20rem;
+    width: 50vw;
+    display: flex;
+    justify-content: right;
+
+    &__ribbon {
+        background-color: $PORTRED;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 17rem;
+        clip-path: polygon(100% 0, calc(100% - 4rem) 50%, 100% 100%, 0 100%, 0 0);
+        min-width: 48rem;
+        width: 100%;
+    }
+}
