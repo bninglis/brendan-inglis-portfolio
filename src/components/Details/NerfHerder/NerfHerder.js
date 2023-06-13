@@ -2,8 +2,8 @@ import "./NerfHerder.scss";
 import Flags from "../Flags/Flags";
 import TechStack from "../TechStack/TechStack";
 import brainstationLogo from "../../../assets/images/brainstation-logo.png";
-import nerfOne from "../../../assets/images/nerf-herder-1.png";
-import nerfTwo from "../../../assets/images/nerf-herder-2.png";
+import nerfOne from "../../../assets/images/thumbs/nerf-herder-1.jpg";
+import nerfTwo from "../../../assets/images/thumbs/nerf-herder-2.jpg";
 
 export default function NerfHerder({ isDrawerOpen, setIsDrawerOpen }) {
     const nerfStack = [

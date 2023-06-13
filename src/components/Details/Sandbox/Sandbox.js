@@ -2,8 +2,8 @@ import "./Sandbox.scss";
 import Flags from "../Flags/Flags";
 import TechStack from "../TechStack/TechStack";
 import hackathonWinner from "../../../assets/images/hackathon-winner-image.jpg";
-import sandboxOne from "../../../assets/images/sandbox-1.png";
-import sandboxTwo from "../../../assets/images/sandbox-2.png";
+import sandboxOne from "../../../assets/images/thumbs/sandbox-1.jpg";
+import sandboxTwo from "../../../assets/images/thumbs/sandbox-2.jpg";
 
 export default function Sandbox({ isDrawerOpen, setIsDrawerOpen }) {
     const sandboxStack = ["html", "css", "sass", "javascript", "react", "nodejs"];

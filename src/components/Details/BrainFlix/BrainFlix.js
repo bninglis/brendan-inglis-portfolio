@@ -2,8 +2,8 @@ import "./BrainFlix.scss";
 import Flags from "../Flags/Flags";
 import TechStack from "../TechStack/TechStack";
 import brainstationLogo from "../../../assets/images/brainstation-logo.png";
-import brainflixOne from "../../../assets/images/brainflix-1.png";
-import brainflixTwo from "../../../assets/images/brainflix-2.png";
+import brainflixOne from "../../../assets/images/thumbs/brainflix-1.jpg";
+import brainflixTwo from "../../../assets/images/thumbs/brainflix-2.jpg";
 
 export default function BrainFlix({ isDrawerOpen, setIsDrawerOpen }) {
     const brainflixStack = ["html", "css", "sass", "javascript", "react", "nodejs", "expressjs"];

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Sandbox from "./Sandbox/Sandbox";
 import NerfHerder from "./NerfHerder/NerfHerder";
 import BrainFlix from "./BrainFlix/BrainFlix";
+import Modal from "./Modal/Modal";
 
 export default function Details({ phase, selectedWork }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
